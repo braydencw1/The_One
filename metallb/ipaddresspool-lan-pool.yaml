@@ -1,0 +1,23 @@
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+    name: lan-pool
+    namespace: metallb-system
+spec:
+    addresses:
+        - ENC[AES256_GCM,data:Xu7SFtALFxNH7wiGdtpzMENaE4PxcuziOw==,iv:22xI+abdw8txWViVAVJgN777t4scdLjhR71GHNA3GSg=,tag:EgFF5ExD0ikYNCb2qWDung==,type:str]
+sops:
+    age:
+        - recipient: age17jre3swefxzhesekzztj2dt8hg6g9vsquyj9zm76mvjl7q8qwdsq9ppgmr
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA1dVR3bEVRMkxrc0Q4Wjky
+            UlpRS3c0SzBTa0pDa1pMc2Zad2dnZmFPVmxrCjRwbm05U0FLRlk0MUc1d2ZCamJa
+            N01YK0MyTVBKOVlIdktZMmxqdEthZU0KLS0tIFZQZFZNcGJWTFV4TjRGRUlubE9T
+            VmJuZjR6UEYrd2VSbUlvQ1J3bHNUaDgK50V8cW24MtucR1Rpl7C6XWqi9WoueQCw
+            SsL/xKmQf+AGhORRqyLo4dHlO9Gh+aBQT6F6x8Ckd5LaZuLC/yOW5A==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2025-09-06T16:49:53Z"
+    mac: ENC[AES256_GCM,data:PHVfR2DqUzpXMKaKXYq49XRHtTB7SgG0fth907ELLJ3g0aQycb7YHCaW6EprNlgplqGUIrCkkb7BQc0NF43hRrQGwTjgeceU0wzdQj//2+l/daeoHYXXWK2SDlPm9Q6y8bu6stkDapgSynqQ/vgMW/pZOLfFdzPgorcjAW13M9k=,iv:6YpfXNkccRGkm7AvmBrQg4eVAT1oJlbLY+DZF6Dx8ns=,tag:RtP6g1VDryct1KyZFVnsfQ==,type:str]
+    encrypted_regex: ^(addresses)$
+    version: 3.10.2

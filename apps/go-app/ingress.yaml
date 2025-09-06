@@ -1,0 +1,32 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    name: go-app-ingress
+spec:
+    ingressClassName: nginx
+    rules:
+        - host: ENC[AES256_GCM,data:vYWVD8Hz36rMcS6MA6s=,iv:2I2jhGoC+5rRPx8DMwtrejJXQsUh1SmBf3YW6sIFxUM=,tag:E85jMbuWF5smztO/GmEIpw==,type:str]
+          http:
+            paths:
+                - path: /
+                  pathType: Prefix
+                  backend:
+                    service:
+                        name: go-app-service
+                        port:
+                            number: 80
+sops:
+    age:
+        - recipient: age17jre3swefxzhesekzztj2dt8hg6g9vsquyj9zm76mvjl7q8qwdsq9ppgmr
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB3c3ZEVmhjaFBKT0pvSnQy
+            VkFiQ3p4eFJJOUNPNjVWUXVLamxEb25Xd1hzCmRMZzdRc3pEcm9rS09jbFQ5Rzhm
+            RnE4RUdnQ2I2OHNtUjNGVHl5VllSNkUKLS0tIFZNSllyQTdPN3VMUUx4QVpmL1Av
+            UzNXZWpIZnptSVNjdTY1K3F6TERLcTAKGjly25StqQaLLQ2RVeBj3vGrVfm2jAhi
+            eK2V+QY3VOYSLepDLxaVK5xHTCU2r6KQzr5k8YIbipe213mcKikCrA==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2025-09-06T17:06:00Z"
+    mac: ENC[AES256_GCM,data:yjyS0wpn+TP/oFhg6RmK2hv7UTe/Z31IueZVNiWDh/5weEgeWHzhzEtjkPiGlp6N3HrToJC7HwGGPIUHLYtHk5ZWzDGtGKuoIsye8htBnmLAHJVixcgWlUP1foYacmKsnxqb4v16+oMfQ16p7VGqnIgzQUO/gv89NAqOLMlp2L4=,iv:lHFQdzAaeNpj4zmNmCkpWi0neWoQht2ZjmrWeTP0gCk=,tag:6mac+9zhDjcwkq+T1QU1/g==,type:str]
+    encrypted_regex: ^(data|stringData|image|host)$
+    version: 3.10.2

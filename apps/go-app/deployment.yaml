@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: go-app
+spec:
+    replicas: 2
+    selector:
+        matchLabels:
+            app: go-app
+    template:
+        metadata:
+            labels:
+                app: go-app
+        spec:
+            containers:
+                - name: go-app
+                  image: ENC[AES256_GCM,data:DM/eetoQOmK9+G0Waz2CJtZFlXp1Q5pXUZRNA1WDUExRRg+EfdQ=,iv:neMJjV2NaK9E6OHhsVPVqCckjKtUnhyMi+uB9cRde30=,tag:KW2d1VwEC2Sw6nUSSEXnew==,type:str]
+                  imagePullPolicy: Always
+                  ports:
+                    - containerPort: 8080
+                  resources:
+                    requests:
+                        cpu: 100m
+                        memory: 128Mi
+                    limits:
+                        cpu: 500m
+                        memory: 256Mi
+sops:
+    age:
+        - recipient: age17jre3swefxzhesekzztj2dt8hg6g9vsquyj9zm76mvjl7q8qwdsq9ppgmr
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAyQ21jYjBab3FQdDJxWGRZ
+            eE55T2J3WEh2d3hFeXNHaVVPSEdKNk1VN2dJCnFjenRIM0ZNbSs0aXlld3pDRG1V
+            VnFhbmVDcXQ5azVpMUFldnJkQTYySjAKLS0tIGdYRG1JZkVScld4aHNzUSsrZzFa
+            ZkgzVmdjaE1HaStlR0hLK1ZncVllclEKFDuGxsnUlK3ZMCnzje9x+ArsSNztwQ4+
+            dzM0NdIE6P3JR25aWMGxZ5Q1r3TMT3ZAxXw7YUTSJJwYQh81s4Bimg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2025-09-06T16:49:08Z"
+    mac: ENC[AES256_GCM,data:zcE1VlVPNt1RuaJma4cVsbFZ0AIq2PD/bDPexsX5K6B48nS1tW9XyvIScPxHpS4tc9VHCr8DCRsol+uM4+ban47LXlZJFRHBQLbpH/2i8ntCphmZBJEF3ekbZy+mpgow+HcBCwqjqM1hKYcvEUkDe5evdLOMrrALptnN5f2Jwg0=,iv:jgxpXt5mD7jiOciQYtpLuXYVrCsKM3sY+s/cTkUmwFM=,tag:9lrT1QnNqBysQH9aayi/Vw==,type:str]
+    encrypted_regex: ^(data|stringData|image)$
+    version: 3.10.2
