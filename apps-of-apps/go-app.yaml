@@ -9,6 +9,8 @@ spec:
     repoURL: https://github.com/braydencw1/The_One
     path: apps/go-app
     targetRevision: main
+    plugin:
+      name: ksops
   destination:
     server: https://kubernetes.default.svc
     namespace: go-app

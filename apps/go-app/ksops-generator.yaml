@@ -1,0 +1,8 @@
+apiVersion: viaduct.ai/v1
+kind: ksops
+metadata:
+  name: go-app-secrets
+files:
+  - deployment.yaml
+  - ingress.yaml
+  - service.yaml

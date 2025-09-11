@@ -6,9 +6,11 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/The_One
+    repoURL: https://github.com/braydencw1/The_One
     path: metallb
     targetRevision: main
+    plugin:
+      name: ksops
   destination:
     server: https://kubernetes.default.svc
     namespace: metallb-system
